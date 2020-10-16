@@ -15,6 +15,11 @@ class DetailMVVMJsonViewController: UIViewController {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var smileButton: UIButton!
 
+
+    @IBOutlet weak var someTextField: UITextField!
+    @IBOutlet weak var someLabel: UILabel!
+    
+
     @IBOutlet weak var image: UIImageView!
 
     //BINDING
@@ -25,8 +30,13 @@ class DetailMVVMJsonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewModelDidChange = { [unowned self] viewModel in
-            isSmile = viewModel.isSmile
+            someLabel.text = viewModel.someText
         }
+
+        viewModel.isSmile.bind { [unowned self] isSmile in
+            self.isSmile = isSmile
+        }
+
         viewModel.setSmileStatus()
 
         likeButton.tintColor = viewModel.isFavorite ? #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1) : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
@@ -39,6 +49,7 @@ class DetailMVVMJsonViewController: UIViewController {
         image.image = UIImage(data: data)
 
 
+        someTextField.delegate = self
 
     }
 
@@ -50,5 +61,14 @@ class DetailMVVMJsonViewController: UIViewController {
     @IBAction func smileButtonPress() {
         viewModel.changeSmileStatus()
         smileButton.tintColor = isSmile ? #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1) : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+    }
+}
+
+extension DetailMVVMJsonViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text {
+            viewModel.changeSomeText(to: text)
+        }
+        return true
     }
 }

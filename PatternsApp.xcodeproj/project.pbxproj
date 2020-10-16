@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0456F3BF252C930D0052851C /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F3BE252C930D0052851C /* MVVMViewController.swift */; };
+		047DD8832530625E00AD9E39 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DD8822530625E00AD9E39 /* Box.swift */; };
 		04811726252C96EB0077CFF0 /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04811725252C96EB0077CFF0 /* MVVMViewModel.swift */; };
 		04891FCB2527174F0063345B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04891FCA2527174F0063345B /* AppDelegate.swift */; };
 		04891FCD2527174F0063345B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04891FCC2527174F0063345B /* SceneDelegate.swift */; };
@@ -27,6 +28,10 @@
 		04D367BB252EFF190018DDED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D367BA252EFF190018DDED /* NetworkManager.swift */; };
 		04D367C4252F09380018DDED /* DetailMVVMJsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D367C3252F09380018DDED /* DetailMVVMJsonViewController.swift */; };
 		04D367CA252F0BF10018DDED /* DetailViewModelMVVMJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D367C9252F0BF10018DDED /* DetailViewModelMVVMJson.swift */; };
+		04E7BD08253A205300F174F3 /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7BD07253A205300F174F3 /* ViperViewController.swift */; };
+		04E7BD10253A207100F174F3 /* ViperInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7BD0F253A207100F174F3 /* ViperInteractor.swift */; };
+		04E7BD15253A207F00F174F3 /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7BD14253A207F00F174F3 /* ViperPresenter.swift */; };
+		04E7BD1B253A20A800F174F3 /* ViperConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7BD1A253A20A800F174F3 /* ViperConfigurator.swift */; };
 		04F46B6C252F19CF006DFA7F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46B6B252F19CF006DFA7F /* ImageManager.swift */; };
 		04F46B71252F2299006DFA7F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46B70252F2299006DFA7F /* DataManager.swift */; };
 		04F46B77252F24DB006DFA7F /* ViewModelMVVMJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46B76252F24DB006DFA7F /* ViewModelMVVMJson.swift */; };
@@ -51,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0456F3BE252C930D0052851C /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		047DD8822530625E00AD9E39 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		04811725252C96EB0077CFF0 /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
 		04891FC72527174F0063345B /* PatternsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04891FCA2527174F0063345B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,10 @@
 		04D367BA252EFF190018DDED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		04D367C3252F09380018DDED /* DetailMVVMJsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMVVMJsonViewController.swift; sourceTree = "<group>"; };
 		04D367C9252F0BF10018DDED /* DetailViewModelMVVMJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelMVVMJson.swift; sourceTree = "<group>"; };
+		04E7BD07253A205300F174F3 /* ViperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
+		04E7BD0F253A207100F174F3 /* ViperInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperInteractor.swift; sourceTree = "<group>"; };
+		04E7BD14253A207F00F174F3 /* ViperPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
+		04E7BD1A253A20A800F174F3 /* ViperConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperConfigurator.swift; sourceTree = "<group>"; };
 		04F46B6B252F19CF006DFA7F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		04F46B70252F2299006DFA7F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04F46B76252F24DB006DFA7F /* ViewModelMVVMJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMVVMJson.swift; sourceTree = "<group>"; };
@@ -138,6 +148,7 @@
 		04891FC92527174F0063345B /* PatternsApp */ = {
 			isa = PBXGroup;
 			children = (
+				04E7BD06253A202800F174F3 /* VIPER */,
 				04D367B9252EFF050018DDED /* Managers */,
 				04D367B8252EFEDF0018DDED /* Other */,
 				04D367AE252EFDF40018DDED /* Models */,
@@ -222,8 +233,20 @@
 			children = (
 				04D367C3252F09380018DDED /* DetailMVVMJsonViewController.swift */,
 				04D367C9252F0BF10018DDED /* DetailViewModelMVVMJson.swift */,
+				047DD8822530625E00AD9E39 /* Box.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		04E7BD06253A202800F174F3 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				04E7BD07253A205300F174F3 /* ViperViewController.swift */,
+				04E7BD0F253A207100F174F3 /* ViperInteractor.swift */,
+				04E7BD14253A207F00F174F3 /* ViperPresenter.swift */,
+				04E7BD1A253A20A800F174F3 /* ViperConfigurator.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 		04F46B75252F247C006DFA7F /* ClubList */ = {
@@ -367,14 +390,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E7BD1B253A20A800F174F3 /* ViperConfigurator.swift in Sources */,
 				04D367BB252EFF190018DDED /* NetworkManager.swift in Sources */,
 				04F46B71252F2299006DFA7F /* DataManager.swift in Sources */,
+				047DD8832530625E00AD9E39 /* Box.swift in Sources */,
 				04811726252C96EB0077CFF0 /* MVVMViewModel.swift in Sources */,
 				0499E3F1252EFCE600A76508 /* MVVMJsonTableViewController.swift in Sources */,
 				04D367CA252F0BF10018DDED /* DetailViewModelMVVMJson.swift in Sources */,
 				0489201225271D860063345B /* Person.swift in Sources */,
 				04D367C4252F09380018DDED /* DetailMVVMJsonViewController.swift in Sources */,
 				04F46B6C252F19CF006DFA7F /* ImageManager.swift in Sources */,
+				04E7BD15253A207F00F174F3 /* ViperPresenter.swift in Sources */,
 				04F46B77252F24DB006DFA7F /* ViewModelMVVMJson.swift in Sources */,
 				0489200A25271C150063345B /* MVPPresenter.swift in Sources */,
 				0456F3BF252C930D0052851C /* MVVMViewController.swift in Sources */,
@@ -383,8 +409,10 @@
 				04891FCF2527174F0063345B /* MVPViewController.swift in Sources */,
 				04D367B3252EFE0A0018DDED /* Results.swift in Sources */,
 				0499E3F6252EFCFB00A76508 /* MVVMJsonTableViewCell.swift in Sources */,
+				04E7BD08253A205300F174F3 /* ViperViewController.swift in Sources */,
 				04891FCB2527174F0063345B /* AppDelegate.swift in Sources */,
 				04891FCD2527174F0063345B /* SceneDelegate.swift in Sources */,
+				04E7BD10253A207100F174F3 /* ViperInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

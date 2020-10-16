@@ -8,19 +8,29 @@
 import Foundation
 
 protocol DetailViewModelMVVMJsonProtocol {
+    var someText: String { get }
+
     var teamName: String { get }
     var teamCode: String { get }
     var teamCountry: String { get }
     var imageData: Data? { get }
     var isFavorite: Bool { get set }
-    var isSmile: Bool { get }
+    var isSmile: Box<Bool> { get }
     var viewModelDidChange: ((DetailViewModelMVVMJsonProtocol) -> Void)? { get set }
     init(team: Team)
     func setSmileStatus()
     func changeSmileStatus()
+    func changeSomeText(to text: String)
 }
 
 class DetailViewModelMVVMJson: DetailViewModelMVVMJsonProtocol {
+
+    var someText: String {
+        didSet {
+            viewModelDidChange?(self)
+        }
+    }
+
     var isFavorite: Bool {
         get {
             DataManager.shared.loadFavoriteStatus(for: team.name)
@@ -30,7 +40,7 @@ class DetailViewModelMVVMJson: DetailViewModelMVVMJsonProtocol {
         }
     }
 
-    var isSmile: Bool {
+    var isSmile:Box<Bool> {
         didSet {
             viewModelDidChange?(self)
         }
@@ -57,16 +67,21 @@ class DetailViewModelMVVMJson: DetailViewModelMVVMJsonProtocol {
     private let team: Team
     required init(team: Team) {
         self.team = team
-        isSmile = false
+        isSmile = Box(value: false)
+        someText = team.name
     }
 
     func setSmileStatus() {
-        isSmile = DataManager.shared.loadFavoriteStatus(for: team.code)
+        isSmile.value = DataManager.shared.loadFavoriteStatus(for: team.code)
     }
 
     func changeSmileStatus() {
-        isSmile.toggle()
-        DataManager.shared.saveFavoriteStatus(for: team.code, with: isSmile)
+        isSmile.value.toggle()
+        DataManager.shared.saveFavoriteStatus(for: team.code, with: isSmile.value)
+    }
+
+    func changeSomeText(to text: String) {
+        someText = text
     }
 }
 

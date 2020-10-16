@@ -9,7 +9,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    let patterns = ["MVP", "MVVM", "MVVMJson"]
+    let patterns = ["MVP", "MVVM", "MVVMJson", "VIPER"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +42,8 @@ class MainTableViewController: UITableViewController {
             performSegue(withIdentifier: "MVVMSegue", sender: nil)
         } else if indexPath.row == 2 {
             performSegue(withIdentifier: "MVVMJsonSegue", sender: nil)
+        } else if indexPath.row == 3 {
+            performSegue(withIdentifier: "viperSegue", sender: nil)
         }
     }
 
